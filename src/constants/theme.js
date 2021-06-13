@@ -1,4 +1,4 @@
- const theme = () => ({
+const theme = () => ({
   primary: '#4cea92',
   secondary: '#52598e',
   textDark: '#262b2e',
@@ -7,4 +7,4 @@
   white: '#fff',
 });
 
-export default theme
+export default theme;

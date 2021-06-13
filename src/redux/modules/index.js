@@ -6,5 +6,5 @@ import userPlaylist from './userPlaylist/reducer';
 export default combineReducers({
   auth,
   featuredPlaylist,
-  userPlaylist
+  userPlaylist,
 });

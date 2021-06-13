@@ -10,4 +10,3 @@ export const clearUserPlaylist = (payload = {}) => ({
   type: CLEAR_USER_PLAYLIST,
   payload,
 });
-
