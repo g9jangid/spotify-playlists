@@ -1,10 +1,7 @@
-import React  from 'react';
-import {
-  PlaylistWrapperDiv,
-  PlaylistContainerHeaderDiv,
-} from 'assets/globalStyle';
+import React from 'react';
+import {PlaylistWrapperDiv, PlaylistContainerHeaderDiv} from 'assets/globalStyle';
 import {useSelector} from 'react-redux';
-import { Droppable, Draggable} from 'react-beautiful-dnd';
+import {Droppable, Draggable} from 'react-beautiful-dnd';
 import PlaylistCard from 'components/PlaylistCard';
 
 const FeaturedPlaylists = () => {
@@ -13,8 +10,13 @@ const FeaturedPlaylists = () => {
   const getRenderItem = (items) => (provided, snapshot, rubric) => {
     const item = items[rubric.source.index];
     return (
-      <PlaylistCard playlist={item} {...provided.draggableProps}   {...provided.dragHandleProps}  innerRef={provided.innerRef}
-      style={provided.draggableProps.style} />
+      <PlaylistCard
+        playlist={item}
+        {...provided.draggableProps}
+        {...provided.dragHandleProps}
+        innerRef={provided.innerRef}
+        style={provided.draggableProps.style}
+      />
     );
   };
 
@@ -44,8 +46,13 @@ const FeaturedPlaylists = () => {
                   ) : (
                     <Draggable draggableId={playlist.id} index={index}>
                       {(provided, snapshot) => (
-                         <PlaylistCard playlist={playlist} {...provided.draggableProps}  isDragging={snapshot.isDragging} {...provided.dragHandleProps}  innerRef={provided.innerRef}
-                         />
+                        <PlaylistCard
+                          playlist={playlist}
+                          {...provided.draggableProps}
+                          isDragging={snapshot.isDragging}
+                          {...provided.dragHandleProps}
+                          innerRef={provided.innerRef}
+                        />
                       )}
                     </Draggable>
                   )}

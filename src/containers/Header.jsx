@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Logo from 'assets/images/logo.png';
 import {useDispatch} from 'react-redux';
-import {clearUserPlaylist} from 'redux/modules/userPlaylist/actions'
+import {clearUserPlaylist} from 'redux/modules/userPlaylist/actions';
 
 const HeaderDiv = styled.div`
   background-color: #262727;
@@ -39,7 +39,9 @@ const Header = () => {
         <HeaderLogoImg src={Logo} alt="" className="d-inline-block" />
         <HeaderLogoText className="d-inline-block">Spotify</HeaderLogoText>
       </div>
-      <HeaderButton onClick={() =>  dispatch(clearUserPlaylist())}>Clear my playlists</HeaderButton>
+      <HeaderButton onClick={() => dispatch(clearUserPlaylist())}>
+        Clear my playlists
+      </HeaderButton>
     </HeaderDiv>
   );
 };
