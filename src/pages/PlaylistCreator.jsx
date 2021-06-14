@@ -26,7 +26,8 @@ const PlaylistCreator = () => {
   }, []);
 
   const onDragEnd = (result) => {
-    const {source, destination, draggableId} = result;
+    const {source, destination, 
+      draggableId} = result;
 
     // dropped outside the list
     if (!destination) {
